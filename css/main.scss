@@ -1,0 +1,41 @@
+$font-stack: Roboto, sans-serif;
+// Remy function
+@function remy($value) {
+@return ($value / 16px) * 1rem;
+}
+body {
+  margin-top: 2rem;
+  font: 100% $font-stack;
+}
+a {text-decoration: none;}
+
+
+
+%status-ampel {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  bottom: 4px;
+}
+.status {
+  @extend %status-ampel;
+}
+.green{
+  background-color: green;
+  &:hover {background: lighten(green, 15%);}
+}
+.red{
+  background-color: red;
+  &:hover {background: lighten(red, 15%);}
+}
+.yellow{
+  background-color: yellow;
+  &:hover {background: lighten(yellow, 15%);}
+}
+
+td.stats {
+  font-size: 0.75em;
+}
+
